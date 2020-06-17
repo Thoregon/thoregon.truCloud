@@ -7,11 +7,18 @@ truCloud
     - nameservice for node id's
 - offer services to others
 
+## Repository
+Provides a public universe wide but structured repository for components.
+--> see homebrew as example 
+
 ## Transactions
 
-sync Entities (snapshots) by an ascending transaction number.
-The number is maintained by a [CRDT](https://github.com/yjs/yjs#Yjs-CRDT-Algorithm) COUNTER
+sync Entities (snapshots) (ascending transaction number?).
+Transactions are maintained by using [CRDT](https://github.com/yjs/yjs#Yjs-CRDT-Algorithm) (COUNTER?)
 neither timestamps nor timearrays are used for sync.  
+
+Tacintherkol ... name of the Repositories   (https://www.perrypedia.de/wiki/Tacintherkol)
+Akrobath     ... permission system          (Wächter über Tacintherkol)
 
 ## Galaxies
 
