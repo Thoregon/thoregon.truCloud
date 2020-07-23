@@ -26,6 +26,10 @@ Build your own galaxy with your own stars. A galaxy can be seen for others,
 but neither accessed nor discovered. Others can be granted to see some content or
 use some functions of your galaxy. 
 
+A galaxy can be seen similar to a repository.
+
+The galaxy Ammandul is the public library/repository. 
+
 ## Stars
 
 This is a thoregon node, which may belong to a galaxy.  Lone stars can exist, but it should
