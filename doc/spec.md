@@ -1,15 +1,23 @@
 truCloud
 ========
 
-## Nodes
-- define your own nodes
-    - each node gets an id and a keypair
-    - nameservice for node id's
-- offer services to others
+TruCloud integrates persistent Objects of any kind to the universe
+- DB                persistent data, GUN
+- Files             persistent files, IPFS, FileCoin
+- Transactions      persistent guarantied transations, Tendermint (Ethereum, Bitcoin, ...)
 
 ## Repository
 Provides a public universe wide but structured repository for components.
 --> see homebrew as example 
+In the repository all published components are available.
+Components can be:
+- apps
+- bounded contexts
+- 
+
+Tacintherkol ... name of the Repositories   (https://www.perrypedia.de/wiki/Tacintherkol)
+Akrobath     ... permission system          (Wächter über Tacintherkol)
+
 
 ## Transactions
 
@@ -17,8 +25,6 @@ sync Entities (snapshots) (ascending transaction number?).
 Transactions are maintained by using [CRDT](https://github.com/yjs/yjs#Yjs-CRDT-Algorithm) (COUNTER?)
 neither timestamps nor timearrays are used for sync.  
 
-Tacintherkol ... name of the Repositories   (https://www.perrypedia.de/wiki/Tacintherkol)
-Akrobath     ... permission system          (Wächter über Tacintherkol)
 
 ## Galaxies
 
@@ -30,7 +36,7 @@ A galaxy can be seen similar to a repository.
 
 The galaxy Ammandul is the public library/repository. 
 
-## Stars
+### Stars
 
 This is a thoregon node, which may belong to a galaxy.  Lone stars can exist, but it should
 do backups of its local DB because there may no replication on another node.
@@ -39,3 +45,4 @@ do backups of its local DB because there may no replication on another node.
 
 The truCloud enables a URL/URI mapping to publish multiple Webapps from one star (thoregon node)
 or a galaxy.
+
