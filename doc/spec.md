@@ -16,7 +16,7 @@ Components can be:
 - 
 
 Tacintherkol ... name of the Repositories   (https://www.perrypedia.de/wiki/Tacintherkol)
-Akrobath     ... permission system          (Wächter über Tacintherkol)
+Akrobath     ... permission system          (Wächter über Tacintherkol, https://www.perrypedia.de/wiki/Akrobath)
 
 
 ## Transactions
@@ -41,8 +41,15 @@ The galaxy Ammandul is the public library/repository.
 This is a thoregon node, which may belong to a galaxy.  Lone stars can exist, but it should
 do backups of its local DB because there may no replication on another node.
 
-## Webapps (PWA)
+There are storage space providers doing this. they get incentives to backup your data.
 
+## Webapps (PWA)
+--> KARTE
 The truCloud enables a URL/URI mapping to publish multiple Webapps from one star (thoregon node)
 or a galaxy.
+Adding a URL to KARTE requires a singature matching the registered URL at the CA
+
+## Components 
+
+## Versions
 
