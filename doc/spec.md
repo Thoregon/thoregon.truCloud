@@ -13,11 +13,10 @@ In the repository all published components are available.
 Components can be:
 - apps
 - bounded contexts
-- 
+- source codes and versions (git)
 
-Tacintherkol ... name of the Repositories   (https://www.perrypedia.de/wiki/Tacintherkol)
-Akrobath     ... permission system          (Wächter über Tacintherkol, https://www.perrypedia.de/wiki/Akrobath)
-
+DORIFER     ... name of the Repositories   (https://www.perrypedia.de/wiki/DORIFER)
+ARCHETIM    ... permission system          (https://www.perrypedia.de/wiki/ARCHETIM, der Beschützer, Einleitung der Retroversion von DORIFER)
 
 ## Transactions
 
@@ -32,9 +31,9 @@ Build your own galaxy with your own stars. A galaxy can be seen for others,
 but neither accessed nor discovered. Others can be granted to see some content or
 use some functions of your galaxy. 
 
-A galaxy can be seen similar to a repository.
+A galaxy can be seen as a cluster of peers owned an operated by someone 
 
-The galaxy Ammandul is the public library/repository. 
+The galaxy Ammandul provides the public library/repository.
 
 ### Stars
 
