@@ -4,7 +4,7 @@ truCloud
 TruCloud integrates persistent Objects of any kind to the universe
 - DB                persistent data, GUN
 - Files             persistent files, IPFS, FileCoin
-- Transactions      persistent guarantied transations, Tendermint (Ethereum, Bitcoin, ...)
+- Transactions      persistent guarantied transactions, Tendermint (Ethereum, Bitcoin, ...)
 
 ## Repository
 Provides a public universe wide but structured repository for components.
@@ -18,11 +18,27 @@ Components can be:
 DORIFER     ... name of the Repositories   (https://www.perrypedia.de/wiki/DORIFER)
 ARCHETIM    ... permission system          (https://www.perrypedia.de/wiki/ARCHETIM, der Beschützer, Einleitung der Retroversion von DORIFER)
 
+### Component Shop
+
+A tool offering search features and categories (tags) to find components.
+
+Includes a component manager for local peer. Each user has full control over the
+local installation. Components can offer an emergency update.
+
+Everblack components form an own category. The have to undergo a review process before
+the can be published. 
+
+### Signatures
+
+A repository features a developer registry. Publishing components requires
+the component to have a valid signature. Updates can only be published 
+with a signature.
+
 ## Transactions
 
 sync Entities (snapshots) (ascending transaction number?).
 Transactions are maintained by using [CRDT](https://github.com/yjs/yjs#Yjs-CRDT-Algorithm) (COUNTER?)
-neither timestamps nor timearrays are used for sync.  
+neither timestamps nor time arrays used for sync.  
 
 
 ## Galaxies
