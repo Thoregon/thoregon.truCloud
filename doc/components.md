@@ -14,3 +14,9 @@ don't import huge modules for just one function
 - extends evolux.dyncomponents by metadata
     - specify API
     - how it can be instantiated from matter (encrypted storage)
+
+Persistent objects
+- metadata
+    - storage version to reinstantiate th right class or to adjust behavior 
+- Completely encrypted storage, also metadata
+

@@ -9,8 +9,12 @@ import Dorifer from "./lib/dorifer.mjs";
 import components       from './@components';
 universe.addComponents(components);
 
+/*
+ * application classes
+ */
 
-export { default as ThoregonApplication }   from './lib/application/thoregonapplication.mjs';
+export { default as ThoregonApplication } from './lib/application/thoregonapplication.mjs';
+export { default as AppSegment }          from './lib/application/appsegment.mjs';
 
 /*
  * Dorifer is the service supplying the
