@@ -36,3 +36,7 @@ Block hashes/addresses from matter (gun,ipfs,ethereum,...)
 
 Block repository entries, keys (signatures)
 (Software) components loaded are always under control of the device owner (identity)
+
+## Contracts
+
+Evaluate contract to accept a change
