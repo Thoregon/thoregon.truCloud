@@ -6,9 +6,6 @@
 
 import Dorifer from "./lib/dorifer.mjs";
 
-import components       from './@components';
-universe.addComponents(components);
-
 /*
  * application classes
  */
