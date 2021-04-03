@@ -10,6 +10,8 @@ Since we can't trust data coming from other peers, we need a firewall to
 
 Extended Firewall, base firewall @see also /evolux.everblack/doc/firewall.md
 
+- strictly enforce same origin
+
 ## Validator Plugins
 Plugins to check if the object to be stored in the local DB
 meet (business) requirements: Business Firewall
