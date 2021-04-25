@@ -22,13 +22,36 @@ meet (business) requirements: Business Firewall
 Signatures are already checked, of course there may be additional signatures to check.
 - Plugins for 'put' in everblack firewall
 - check if dispatched object content fits to the settings
-- settings will be received with the first sync and are signed be the admin
+- settings will be received with the first sync and are signed by the admin
 - ! check attest of modifier if allowed
 
+Value and state permissions (on all listening peers)
+- function evaluates -> reject or accept
+- reusable in UI and in firewall to reduce transfer and load
 
 e.g. check if Thatsme Channel 
 -  is Chat or Comment when received
 - forbidden message content ()
+
+## PermissionManager
+
+Hierarchical set of managers
+- top: system policy
+    - transitions
+        - user changes
+        - to online/offline
+        - start/end progress (requests)
+    - states
+        - is signed on 
+        - online/offline
+        - in progress (requests)
+- bound to entity
+    - transitions
+        - changes of properties
+        - 
+    - states
+        - exists
+        - value is in domain
 
 ## Blacklists
 
