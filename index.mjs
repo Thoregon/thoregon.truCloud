@@ -14,6 +14,12 @@ export { default as ThoregonApplication } from './lib/application/thoregonapplic
 export { default as AppSegment }          from './lib/application/appsegment.mjs';
 
 /*
+ * repostory
+ */
+
+export { default as ThoregonRepository } from './lib/repo/thoregonrepository.mjs';
+
+/*
  * Dorifer is the service supplying the
  * repository for the thoregon system and
  * supporting the thoregon rules

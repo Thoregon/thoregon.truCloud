@@ -6,6 +6,8 @@
  * @see: {@link https://github.com/Thoregon}
  */
 
-export default class RepoMckup {
+import ThoregonRepository from '/thoregon.truCloud'
+
+export default class RepoMckup extends ThoregonRepository {
 
 }
