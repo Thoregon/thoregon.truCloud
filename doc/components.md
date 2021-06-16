@@ -4,6 +4,34 @@ Components
 Don't bloatware. 
 import finegrain, don't import huge modules for just one function
 
+
+----------------------
+- Repository
+    - lookup component (app)
+    - has component.mjs -> import
+    - else has index.mjs -> import
+    - else analyse package
+
+- ComponentDescriptor
+    - from component.mjs if exists
+    - create descriptor based on package analysis 
+- ComponentStructure
+    - name convention 
+    - overridable by component
+    - analyse package
+- ThoregonApplication (thoregon.truCloud) instance
+    - if implementation (subclass) exist use it
+    - else create instance of ThoregonApplication with ComponentDescriptor and ComponentStructure
+    - supply queries nd commands
+    - prpare test data if missing
+- AuroraApp (thoregon.aurora) instance
+    - if implementation (subclass) exist use it (must register custom element)
+    - else create instance of AuroraApp with ComponentDescriptor and ComponentStructure
+        - register custom element, tag will be to app id
+    - add as child to <thoregon-app> placeholder
+
+----------------------
+
 - mapping module/component to location
 - each app supplies its own mapping
     - like package.lock with refernces to the used versions

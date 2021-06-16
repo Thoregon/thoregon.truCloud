@@ -1,6 +1,10 @@
 Repositories
 ============
 
+Repo Loaders:
+- node: bootloader.addLoader RepoLoader
+- browser: serviceworker register RepoLoader
+
 registered in DORIFER
 top thoregon repo in DORIFER -> AMMANDUL
 
