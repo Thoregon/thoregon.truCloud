@@ -4,7 +4,7 @@ truCloud
 TruCloud integrates persistent Objects of any kind to the universe
 - DB                persistent data, GUN
 - Files             persistent files, IPFS, FileCoin
-- Transactions      persistent guarantied transactions, Tendermint (Ethereum, Bitcoin, ...)
+- Transactions      persistent guarantied transactions, own CRDT, Tendermint (Ethereum, Bitcoin, ...)
 
 ## Repository
 Provides a public universe wide but structured repository for components.
@@ -15,8 +15,12 @@ Components can be:
 - bounded contexts
 - source codes and versions (git)
 
-DORIFER     ... name of the Repositories   (https://www.perrypedia.de/wiki/DORIFER)
-ARCHETIM    ... permission system          (https://www.perrypedia.de/wiki/ARCHETIM, der Beschützer, Einleitung der Retroversion von DORIFER)
+
+Names
+- DORIFER     ... name of the Repositories   (https://www.perrypedia.de/wiki/DORIFER)
+- ARCHETIM    ... persitence and permission system          (https://www.perrypedia.de/wiki/ARCHETIM, der Beschützer, Einleitung der Retroversion von DORIFER)
+- Akrobath    ... firewall framework (Akrobath wurde schließlich von Harno zum Wächter über das Tacintherkol (Raumschiffsfriedhof) ernannt)
+
 
 ### Component Shop
 

@@ -1,6 +1,8 @@
 Firewall
 ========
 
+Akrobath: Akrobath wurde schließlich von Harno zum Wächter über das Tacintherkol (Raumschiffsfriedhof) ernannt
+
 Since we can't trust data coming from other peers, we need a firewall to 
 - defend spam attacks, which probably fills up your local DB
 - reject invalid data
