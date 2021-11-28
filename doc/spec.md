@@ -6,7 +6,8 @@ TruCloud integrates persistent Objects of any kind to the universe
 - Files             persistent files, IPFS, FileCoin
 - Transactions      persistent guarantied transactions, own CRDT, Tendermint (Ethereum, Bitcoin, ...)
 
-## Repository
+
+## Repositoies
 Provides a public universe wide but structured repository for components.
 --> see homebrew as example 
 In the repository all published components are available.
