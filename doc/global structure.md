@@ -58,20 +58,26 @@
         + agents
         + devices
         + repositories
-        + properties
+        + properties  ? other name
         + apps
         -  (mappings & queries)
         + device        ... the current device  => device.current
         + app           ... the current app     => qpp.current
-    + aliases
+   + aliases --> future  ? which level
+
+- hosted ssi -> key pairs from host system
+- guest ssi  -> local keypairs, may be deleted later
 
 ## Application
 
 + app
     + current           ... the current app instance
+    + widget            ... current widget
     + instances         ... collection of all instances for the user (= me.ssi.apps)
         + <instanceid>      ... an app instance referenced by its id
         + <instanceid>...
+
+    
 
 ## Device
 
