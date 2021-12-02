@@ -53,34 +53,53 @@
 + me
     + ssi
         - (collections & directories)
-        + credentials
-        + contacts
+        + credentials   ... for each credential, a set of key pairs will be created. An alias can be attached to a credential if the provider is greedy (im terms of collecting personal data) 
+        + contacts      ... there is also a channel for each contact implicit
+        + channels      ... message channels subscribed by the user
         + agents
         + devices
         + repositories
-        + properties  ? other name
+        + collections   ... an abritrary collection of objects and other sub collections collected by the user
         + apps
+        + aliases       ... already created aliases with 'personal data'. use for greedy service providers.
         -  (mappings & queries)
         + device        ... the current device  => device.current
         + app           ... the current app     => qpp.current
-   + aliases --> future  ? which level
 
 - hosted ssi -> key pairs from host system
-- guest ssi  -> local keypairs, may be deleted later
+- guest ssi  -> local keypairs, may be deleted later, 
 
 ## Application
 
 + app
-    + current           ... the current app instance
+    + current           ... current app instance
     + widget            ... current widget
     + instances         ... collection of all instances for the user (= me.ssi.apps)
         + <instanceid>      ... an app instance referenced by its id
         + <instanceid>...
 
-    
+the structure inside the 'instance' is defined by the app developer
 
 ## Device
 
 + device
     + current           ... current device instance
     + instances         ... collection of device instances (= me.ssi.devices)
+
+## Service Agent
+- is only available on a node running as service agent
+
++ agent
+    + current           ... current service agent
+        + services      ... installed services available on this agent
+        + repositories  ... taped repositories used in this agent
+        + device        ... the device the agent resides on, may also be a virtual machine or a container with limited resources
+        + collection    ... an abritrary collection of objects and other subcollections collected by the user
+    + instance          ... the other service agents belonging to the SSI. agents can communicate
+        
+A service is simmilar to an app. a service can also serve multiple instances (tenents).
+the difference to the app in the UI is that all instances of the service are available.
+
++ service               ... simmilar to 'app'
+    + current
+    + instances
