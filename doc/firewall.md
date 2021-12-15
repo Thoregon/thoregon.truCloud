@@ -64,6 +64,8 @@ Block hashes/addresses from matter (gun,ipfs,ethereum,...)
 Block repository entries, keys (signatures)
 (Software) components loaded are always under control of the device owner (identity)
 
+--> see [Java SecurityManager](https://docs.oracle.com/javase/tutorial/essential/environment/security.html)
+
 ## Contracts
 
 Evaluate contract to accept a change

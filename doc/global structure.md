@@ -91,7 +91,7 @@ the structure inside the 'instance' is defined by the app developer
 
 + agent
     + current           ... current service agent
-        + services      ... installed services available on this agent
+        + services      ... installed services available on this agent. On the service side the 'producer' will be delivered on access, on client side the 'consumer' will be instantiated
         + repositories  ... taped repositories used in this agent
         + device        ... the device the agent resides on, may also be a virtual machine or a container with limited resources
         + collection    ... an abritrary collection of objects and other subcollections collected by the user
