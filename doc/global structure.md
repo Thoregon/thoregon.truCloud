@@ -56,6 +56,7 @@
         + credentials   ... for each credential, a set of key pairs will be created. An alias can be attached to a credential if the provider is greedy (im terms of collecting personal data) 
         + contacts      ... there is also a channel for each contact implicit
         + channels      ... message channels subscribed by the user
+        + wallets       ... check if it is a wallet is a credential
         + agents
         + devices
         + repositories
