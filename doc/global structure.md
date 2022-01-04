@@ -57,10 +57,12 @@
         + contacts      ... there is also a channel for each contact implicit
         + channels      ... message channels subscribed by the user
         + wallets       ... check if it is a wallet is a credential
+        + files         ... files, media (images, video, audit, ...) mgmt of all my media
         + agents
         + devices
         + repositories
         + collections   ... an abritrary collection of objects and other sub collections collected by the user
+        
         + apps
         + aliases       ... already created aliases with 'personal data'. use for greedy service providers.
         -  (mappings & queries)
