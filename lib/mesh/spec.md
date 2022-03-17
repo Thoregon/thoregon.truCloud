@@ -38,7 +38,12 @@ The same service/producer can be deployed on mutiple agent.
 
 A mesh offers failover, starting/using a service/producer from another agent.
 
-Work will be distributed with load balancing.
+Work will be distributed with load balancing: (see also Thoregon Übertrag gdoc)
+- producer periodically sets the 'last_alive' timestamp. after a grace period it is assumed the service is not available (offline).
+    - consumer checks if producer is available (online)
+- producer selects its requests id by modulo num of producers 
+- the queue dispatches actively to the known producers, which have its own queues
+- like token ring, the producer with the token gets the work
 
 The mesh itself offers an API facade.
 Offers also subscriptions.
@@ -53,10 +58,14 @@ A mesh can also have multiple instances. This is analogous to app instances.
 If an app instance is created, also a mesh instance will be created.
 
 An application can provide a declaration which services/producers is needs to work.
---> see WS-CDL entities and declarations 
+
+References
+--> see WS-CDL entities and declarations
+    - https://www.w3.org/TR/ws-cdl-10/
+    - [Vergleich von BPEL und WS-CDL](https://www.grin.com/document/67614) 
 --> evolve to BPMN (2.0)
     - https://github.com/bpmn-io
-
+--> systemctl .servce, .socket, .target, .timer, ...  https://www.linux-community.de/ausgaben/linuxuser/2018/07/handarbeit-2/
   
 ## Classes
 
