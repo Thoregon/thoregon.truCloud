@@ -1,6 +1,55 @@
 Repositories
 ============
 
+## Concept
+
+### Evolux & Thoregon Components
+
+### Terra Components
+
+### Components & Modules
+
+Each component/module can specify a mapping for 'import' to repository entries. 
+The file 'repos.mjs' contains the mapping:
+
+map a component with its name w/o a leading '/'
+to a component path in a named repository
+
+    export default {
+        'component-name' : 'repo:reponame:/component/path',
+        'component-name' : 'repo:reponame@version:/component/path',
+        'component-name' : 'repo:reponame@latest:/component/path'
+    }
+
+use in code with import:
+
+    import Component from '/component-name/lib/component.mjs'
+    
+resolves to: 'repo:reponame:/component/path/lib/component.mjs'
+
+a SHA512 hash of the reponame - with the version if provided - prefixed with 'trepo:' will be used as content address (soul).
+    reponame            ->  'trepo:reponame@root'
+    reponame@version    ->  'trepo:reponame@version'
+    reponame@latest     ->  'trepo:reponame@versionTaggedLatest'
+    
+new souls for new versions can only be occupied with a signature signed by the same key that was used for the root version.
+the root entry also contains a list of available versions, tags for versions and a 'latest' (latest released) item. 
+
+a component once released may be tagged as deprecated, but never can be withdrawn! This is to avoid invalidation
+of other components relying on this component version.
+
+caution: the 'latest' reference should only be used during dev & testing. production releases of components should
+always reference to a version with which it was sucessfully tested. 
+
+The component will be included (by AppStructure/Dorifer) when the component initially is loaded.
+Unknown repos must be confirmed by the user. 
+For each import, also for each partial import of just one file of a component, the 'repos.mjs' from the component
+will be considered and used to resolve other imports.  
+
+A mapping for the dev server can override the repo mapping to a local mapping for dev & testing. 
+
+## Loaders
+
 Repo Loaders:
 - node: bootloader.addLoader RepoLoader
 - browser: serviceworker register RepoLoader
