@@ -19,6 +19,7 @@ to a component path in a named repository
         'component-name' : 'repo:reponame:/component/path',
         'component-name' : 'repo:reponame@version:/component/path',
         'component-name' : 'repo:reponame@latest:/component/path'
+        'component-name' : 'repo:#reposoul:/component/path',        
     }
 
 use in code with import:
@@ -33,6 +34,7 @@ a SHA512 hash of the reponame - with the version if provided - prefixed with 'tr
     reponame@latest     ->  'trepo:reponame@versionTaggedLatest'
     
 new souls for new versions can only be occupied with a signature signed by the same key that was used for the root version.
+(caution: may need a consensus mechanism and/or a registry)
 the root entry also contains a list of available versions, tags for versions and a 'latest' (latest released) item. 
 
 a component once released may be tagged as deprecated, but never can be withdrawn! This is to avoid invalidation
