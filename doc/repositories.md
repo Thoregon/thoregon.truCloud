@@ -16,9 +16,15 @@ map a component with its name w/o a leading '/'
 to a component path in a named repository
 
     export default {
+        // lookup via name (SHA) 
         'component-name' : 'repo:reponame:/component/path',
         'component-name' : 'repo:reponame@version:/component/path',
         'component-name' : 'repo:reponame@latest:/component/path'
+        // via a directory
+        'component-name' : 'dir:dirname:reponame:/component/path'
+        'component-name' : 'dir:dirname:reponame@version:/component/path'
+        'component-name' : 'dir:dirname:reponame@latest:/component/path'
+        // direct access to soul (address), no version specified
         'component-name' : 'repo:#reposoul:/component/path',        
     }
 
@@ -28,7 +34,9 @@ use in code with import:
     
 resolves to: 'repo:reponame:/component/path/lib/component.mjs'
 
-a SHA512 hash of the reponame - with the version if provided - prefixed with 'trepo:' will be used as content address (soul).
+when there is no directory specified to lookup the repository, a SHA512 hash 
+of the reponame - with the version if provided - prefixed with 'trepo:' will be used as content address (soul).
+
     reponame            ->  'trepo:reponame@root'
     reponame@version    ->  'trepo:reponame@version'
     reponame@latest     ->  'trepo:reponame@versionTaggedLatest'
@@ -49,6 +57,10 @@ For each import, also for each partial import of just one file of a component, t
 will be considered and used to resolve other imports.  
 
 A mapping for the dev server can override the repo mapping to a local mapping for dev & testing. 
+
+## Repository & Entries
+
+
 
 ## Loaders
 
