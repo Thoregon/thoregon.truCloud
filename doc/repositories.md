@@ -16,16 +16,18 @@ map a component with its name w/o a leading '/'
 to a component path in a named repository
 
     export default {
-        // lookup via name (SHA) 
+        // lookup via name in thoregon main directory 
         'component-name' : 'repo:reponame:/component/path',
         'component-name' : 'repo:reponame@version:/component/path',
         'component-name' : 'repo:reponame@latest:/component/path'
-        // via a directory
-        'component-name' : 'dir:dirname:reponame:/component/path'
-        'component-name' : 'dir:dirname:reponame@version:/component/path'
-        'component-name' : 'dir:dirname:reponame@latest:/component/path'
+        // via a directory registered in thoregon main directory
+        'component-name' : 'repo:dirname:reponame:/component/path'
+        'component-name' : 'repo:dirname:reponame@version:/component/path'
+        'component-name' : 'repo:dirname:reponame@latest:/component/path'
         // direct access to soul (address), no version specified
         'component-name' : 'repo:#reposoul:/component/path',        
+        // lookup via name -> build soul (address) with SHA512(name) 
+        'component-name' : 'repo:&reponame:/component/path',        
     }
 
 use in code with import:

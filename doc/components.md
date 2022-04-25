@@ -4,6 +4,42 @@ Components
 Don't bloatware. 
 import finegrain, don't import huge modules for just one function
 
+## Event Registries
+
+### Dorifer
+
+Dorifer is the main registry. Filters and Actions can be 
+added in the 'index.mjs' of the component/app
+
+### AuroraElement
+
+Registry for UI element and setup events. 
+
+## Subscriptions
+
+dorifer.addAction()
+dorifer.doAction()
+
+- 
+(UFD = UnifiedFileDescriptor)
+
+UFD will always 'doAction' when it needs display/storage adapters
+
+- UFD.displayAdapters
+    - param: display adapter registry
+    - add the display adapters provided by the module    
+- UFD.storageAdapters
+    - param: storage adapter registry
+    - add the display adapters provided by the module    
+
+dorifer.addAction('dvvfv', [obj, 'fnName']);
+dorifer.addAction('dvvfv', fn);
+
+dorifer.addAction('UFD.displayAdapters', (ufd, selector) => {
+    if (VimeoAdapter.canHandle(ufd.store.url)) return VimeoAdapter;
+})
+
+
 
 ----------------------
 - Repository
