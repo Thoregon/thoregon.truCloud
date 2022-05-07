@@ -30,7 +30,9 @@ UFD will always 'doAction' when it needs display/storage adapters
     - add the display adapters provided by the module    
 - UFD.storageAdapters
     - param: storage adapter registry
-    - add the display adapters provided by the module    
+    - add the display adapters provided by the module   
+    
+     
 
 dorifer.addAction('dvvfv', [obj, 'fnName']);
 dorifer.addAction('dvvfv', fn);
@@ -39,7 +41,14 @@ dorifer.addAction('UFD.displayAdapters', (ufd, selector) => {
     if (VimeoAdapter.canHandle(ufd.store.url)) return VimeoAdapter;
 })
 
+### Mediathek
 
+const media = universe.mediathek;
+
+media.addAction('...', () => {});
+
+media.addDisplayAdapter(adapter, { opts });     // opts.prority 1..10
+media.addStorageAdapter(adapter, { opts });
 
 ----------------------
 - Repository

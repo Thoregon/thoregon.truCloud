@@ -1,12 +1,13 @@
 Mediathek
 =========
 
-application designer decides if mediathek is used or to which degree
+!! application designer decides if mediathek is 'used' or to which degree
 
 - mediathek used
     - other SAs listens on mediathek, does quality encodings and pinning
 - no mediathek (embedded)
     - api to request pinning/unpinning from SAs
+- pinning will always be initiated by invoking the Mediathek
 
 - private (encrypted)
 - public (not encrypted)
@@ -28,19 +29,16 @@ MediaEntity
     - browser: ask user for file access
 - tags
     - multiple
-- folders
-    - file in multiple folders (like symlink)
 - properties (key/value)
     - arbitrary
     - mime specific
         - mp3
         - exif
-- notes (list)
 - date
     - created
     - modified
     - (deleted)
-- permissions
+- permissions --> certs for  SSI's
     - owner(s)
     - editors
     - buyers 
@@ -48,7 +46,13 @@ MediaEntity
 - version history
     - migration history, e.g. deprecated urls 
 - hidden/archive/attic
-- usage 
+
+Additional properties, references the file descriptor, additional functionality by another component/app 
+- CID (IPFS)
+- folders (FileSystem App)
+    - file in multiple folders (like symlink)
+- notes (list): personal notes for SSI,  
+- usage
     - embedded -> can not be referenced 
     - references to this entity -> garbage collection
     - statistics
@@ -157,16 +161,23 @@ mapping mime to impl (class) to handle media data e.g. video player
 ## Folders & Tags
 
 - folder: fix defined list of descriptors
-- tags: virtual (search) folder wih variabe content
+- tags: virtual (search) folder with variable content
 
 ## Migrations
 
-create of new storages and migrations are user/admin decissions
+create of new storages and migrations are user/admin decisions
 --> credentials to other storage services
 
 - migrate content to another storage
 - select files
     - by tag(s)
+
+## All Files Directory
+
+- keep a directory in the mediathek for all file hashes with soul
+- also 'embedded' files
+- maintain usage (or define a query: where is the soul referenced)
+    - garbage collection
 
 ## Alternatives to encryption
 
@@ -174,6 +185,11 @@ create of new storages and migrations are user/admin decissions
     - first 10 seconds, rest in another stream
 
 ## Video Players
+
+--> https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API
+
+- https://github.com/video-dev/hls.js/
+    - https://github.com/moshisushi/hlsjs-ipfs-loader
 
 - https://videojs.com/
     http://www2.videojs.com/
@@ -185,6 +201,57 @@ create of new storages and migrations are user/admin decissions
 ? can we use the hash fn from ipfs w/o add/upload
     -> apply the hash fn to the url to find out if it is used/pinned already 
 
+## Media Specific Data & Features
+
+### Streams & Collections
+
+- Chapter
+    - timecode
+    - name, description
+- Likes
+    - timecode
+    - who
+    - overall
+- Comments
+    - timecode
+    - who
+    - overall
+- Usage
+    - statistics which sections will be viewed by the audience
+    - overall
+
+### Podcast Sources
+
+## Adapters
+
+### Storage
+
+- source (storage system) defines adapter
+- specifies a storage system
+- PUT, GET, DELETE
+    - PUT & DEL optional
+- may need credentials 
+    - for all
+    - for a root in the storage system, if multiple accounts
+
+#### IPFS & Pinning
+
+Garbage Collection
+- take usage (references to) 
+- unpin/remove local
+
+Pinning
+- ServiceAgent of SSI
+- Pinning Service from a Provider 
+
+### UI
+
+## Resumable Uploads
+
+- upload to Service Agent (resumable)
+- SA add to IPFS, Torrent, S3
+- Storage! POC -> 2000 Videos
+    
 ## Stockexchange for storage
 
 - automated agents/bots
