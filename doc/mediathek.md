@@ -162,6 +162,8 @@ mapping mime to impl (class) to handle media data e.g. video player
 
 - folder: fix defined list of descriptors
 - tags: virtual (search) folder with variable content
+    - tag mapping will be stored: code <-> tag
+    - tag management (similar to CID's)
 
 ## Migrations
 
