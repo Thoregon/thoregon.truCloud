@@ -3,6 +3,23 @@ Repositories
 
 ## Concept
 
+### User (SSI) Repo Collection
+
+each SSI has its collection of repositories.
+by default, the 'ssirepo', 'ammandul' and the 'neuland' repositories are available.
+
+the user can add arbitrary repositories provided by others. this always involves the risk of installing malware.
+we introduced a dashboard 'neuland extension repositories' where repositories can be rated and warnings can be posted.
+
+the user can order the repositories, after 'ssirepo' and 'ammandul', the first repo which provides the component wins.
+'ssirepo' and 'ammandul' always comes first.
+
+the 'ssirepo' is the private repo of the SSI. the SSI can maintain this repo, add own components 
+and also override components from other repos, also system modules from ammandul.  
+
+for development there exists also a dev repository provider to
+enable developers to code and debug on localhost. the dev repo always comes first.
+
 ### Evolux & Thoregon Components
 
 ### Terra Components
