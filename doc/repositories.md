@@ -1,6 +1,8 @@
 Repositories
 ============
 
+!!! rename Component --> Library
+
 ## Concept
 
 ### User (SSI) Repo Collection
@@ -27,7 +29,7 @@ enable developers to code and debug on localhost. the dev repo always comes firs
 ### Components & Modules
 
 Each component/module can specify a mapping for 'import' to repository entries. 
-The file 'repos.mjs' contains the mapping:
+The file 'libraries.mjs' contains the mapping:
 
 map a component with its name w/o a leading '/'
 to a component path in a named repository
@@ -72,14 +74,68 @@ always reference to a version with which it was sucessfully tested.
 
 The component will be included (by AppStructure/Dorifer) when the component initially is loaded.
 Unknown repos must be confirmed by the user. 
-For each import, also for each partial import of just one file of a component, the 'repos.mjs' from the component
+For each import, also for each partial import of just one file of a component, the 'libraries.mjs' from the component
 will be considered and used to resolve other imports.  
 
 A mapping for the dev server can override the repo mapping to a local mapping for dev & testing. 
 
+## Library (Archive) Structure
+
+- archive as ZIP
+- dirs
+  - etc  ... meta info about the library
+    - lib.json    ... properties from this library, shoul be the same as in the repository entry except the contained components
+    - sig.json    ... contains the digest (SHA256) from all Components in this library signed by publisher (verify with public key) 
+  - {componentName}  ... name of the component with this library
+  - {componentName2} ... name of the component with this library
+  - {componentName3} ... name of the component with this library
+
 ## Repository & Entries
 
+- standard repos
+  - thoregon
+  - thatsme
+  - neuland
 
+- extended repos
+
+### Entries
+
+- Publisher must be allowed to add/modify entires
+- Entry/Library Properties
+  - name
+  - description
+  - version
+  - tags
+  - image (multiformat)
+  - licence
+  - contributors
+  - digest     ... the digest (SHA256) from all Components in this library
+  - signature  ... the digest (SHA256) signed by publisher (verify with public key)
+  - urn to archive
+- Archive
+  - see [Library (Archive) Structure](./#Library-(Archive)-Structure)
+
+### Namespaces
+
+Repos offers namespaces to register multiple packages within one namespace
+
+### Multipackages
+
+one ZIP can contain multiple packages.
+the repo will register all packages within the multi package.
+
+### Versions
+
+- The repos always delivers :latest if no version specified
+- versions can be specified in 'libraries.mjs'
+
+### Overrides
+
+- users (ssi) can override repo entries
+  - ssi overall
+  - for a device
+  - for an agent
 
 ## Loaders
 

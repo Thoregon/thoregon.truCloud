@@ -1,5 +1,5 @@
-Components
-==========
+Archives
+========
 
 Don't bloatware. 
 import finegrain, don't import huge modules for just one function
