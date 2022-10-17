@@ -5,7 +5,62 @@ Repositories
 
 ## Concept
 
-### User (SSI) Repo Collection
+each SSI has an order list of repositories.
+the repositories and entries will be loaded at start to the PULS.
+to boot, the repositories with ist will be stored on each device on a local storage.
+the entries will be synchronized once the universe (matter) is available 
+- private  ... local on the device, can only be maintained by the user (SSI) and override every module
+- thoregon ... system libs
+- thatsme  ... SSI libs
+- neuland  ... public repository 
+
+when the SSI signs in the additional repos will be added
+- xyz
+
+the loaders will lookup where to get a component if not in cache.
+
+each app can specify a mapping which version from a component it uses. (see components & modules)
+if a repository is referenced which is not in the repos list of the SSI, the user must be asked
+if it should be added 
+
+## Formats
+
+### Repository
+
+Sample Repository Entry for the thatsme
+````
+// 
+{
+    modules    : [ 'thatsme-application', 'thatsme-module-messageprovider' ],
+    publisher  : { 
+        name: 'thatsme.plus',
+        pubkeys : {
+            spub: "aYuWl5u0rXkRApuhAv-eS-hrdrb4YXpAYJWinUUgmug.Nzw6iVxluP2apytVKx-d2BvQ5_8KyZOlEaT0bXgOFHg",
+            epub: "HU5SfoYC8drGbybExYFA_4b5hC0gMdvEgEjGgvRXyaI.37719Ua1-wtW5I34ks0DcSBH1hb60c1tJOPoucaEbq0",
+            apub: "21BDxXRPlb_hx1t0MGcbmTg6B8ZAdBxcZvhacN-sv_YfMLLLOaP-jFPysT_uw0ut3TW1NfbNAf4Z6hgFp7WIE-4KrBy56J_31DvNiomw6q7dnTKElr6M6cO45_ZGPwdLkUxMtuGfzA51dpHJ-35uSIHx_UKux0lGUQYdTSDQUABh4ou6o5nEjz3Wkmh8ecgm0BMCHyVT_rXT1TT8bjhHgXi5RSJIBzDTDjhJOyl7oMvfZo6-o2G7Xsek3Sxz2jSpuK2TxrSNvCPr8JTNjhfAr4UqQZL_-BYT1csCsiKyvUJt0WfFnRdGiXsFLobT7nyvgVYJjz8q5PB9pnmmzOOlTq4Nkbzkl_JCC8JUMQKOWgDNQmq8Fzv5D51v4Xsu2smPs7ItfnRSNcpk0LpBu_tIPa8eJ-AiY89QZNrkI3w6tRtYc-nebc4k7nh7Q3j9uZnKUeugiXuf1W2LOFGOPS99grXyfm8b14nxis-ggDnGZvNQRN1_pEilli0zcee4zQ57"
+        },
+    },
+    licence    : 'MIT',
+    description: '',
+    latest     : '1.0.0',
+    images     : {},
+    notes      : [],
+    issues     : [],
+    versions: [
+        {
+            version  : '1.0.0',
+            images   : {},      // each version may provide its own images
+            notes    : [],
+            tags     : [],
+            sources  : [ 'https://thatsme.plus/modules/thatsme-application.zip' ],
+            digest   : '',  // SHA256 digets of all components in the archive
+            signature: '',  // the digest signed by publisher (verify with publisher public key)
+        }
+    ]
+}
+````
+
+## User (SSI) Repo Collection
 
 each SSI has its collection of repositories.
 by default, the 'ssirepo', 'ammandul' and the 'neuland' repositories are available.
@@ -30,6 +85,8 @@ enable developers to code and debug on localhost. the dev repo always comes firs
 
 Each component/module can specify a mapping for 'import' to repository entries. 
 The file 'libraries.mjs' contains the mapping:
+--> puls: check with the referrer which app requires the import 
+
 
 map a component with its name w/o a leading '/'
 to a component path in a named repository
@@ -56,11 +113,11 @@ use in code with import:
 resolves to: 'repo:reponame:/component/path/lib/component.mjs'
 
 when there is no directory specified to lookup the repository, a SHA512 hash 
-of the reponame - with the version if provided - prefixed with 'trepo:' will be used as content address (soul).
+of the reponame - with the version if provided - prefixed with 'repo:' will be used as content address (soul).
 
-    reponame            ->  'trepo:reponame@root'
-    reponame@version    ->  'trepo:reponame@version'
-    reponame@latest     ->  'trepo:reponame@versionTaggedLatest'
+    reponame            ->  'repo:reponame@root'
+    reponame@version    ->  'repo:reponame@version'
+    reponame@latest     ->  'repo:reponame@versionTaggedLatest'
     
 new souls for new versions can only be occupied with a signature signed by the same key that was used for the root version.
 (caution: may need a consensus mechanism and/or a registry)
@@ -101,7 +158,7 @@ A mapping for the dev server can override the repo mapping to a local mapping fo
 
 ### Entries
 
-- Publisher must be allowed to add/modify entires
+- Publisher must be allowed to add/modify entries
 - Entry/Library Properties
   - name
   - description
