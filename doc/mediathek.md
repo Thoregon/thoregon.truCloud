@@ -1,6 +1,9 @@
 Mediathek
 =========
 
+- for SSI
+- for App
+
 !! application designer decides if mediathek is 'used' or to which degree
 
 - mediathek used
