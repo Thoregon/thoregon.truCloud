@@ -9,7 +9,7 @@ each SSI has an order list of repositories.
 the repositories and entries will be loaded at start to the PULS.
 to boot, the repositories with ist will be stored on each device on a local storage.
 the entries will be synchronized once the universe (matter) is available 
-- private  ... local on the device, can only be maintained by the user (SSI) and override every module
+- shelter  ... local on the device, can only be maintained by the user (SSI) and override every module
 - thoregon ... system libs
 - thatsme  ... SSI libs
 - neuland  ... public repository 
@@ -22,6 +22,64 @@ the loaders will lookup where to get a component if not in cache.
 each app can specify a mapping which version from a component it uses. (see components & modules)
 if a repository is referenced which is not in the repos list of the SSI, the user must be asked
 if it should be added 
+
+## How it works
+
+scenario A: unstained environment
+
+
+scenario B: a local 'copy' of the repository list exists
+- the repository entries of a referenced contains only 'used' components
+- 
+
+scenario C: enviroment is a service agent
+- an SA is dedicated to an SSI
+- on install it will get a reposiory list from the SA
+
+- all loaders except the devloader maintains local caches to provide components faster
+- updates for entries will need the allowance of the user 
+  - auto update presets for some components
+  - ask user to execute updates
+
+### Protouniverse
+- provides a boot repository 
+  - default structure if nothing is available locally
+  - get a local 'copy' of the repository list
+    - only if this device is assigned to a single SSI
+    - if multiple SSI use this device, it contains only public system entries from thoregon and thatsme
+      - no shelter respo can be used in this case, it can only be applied when an SSI signs on
+- hand over repository structure to puls (loaders) 
+
+### Puls
+- Loaders 
+  - devloader
+    - only in dev  mode
+    - tries to get the requried modules from dev server, usually modules will be referenced on localhost
+  - shelterloader
+  - thoregonloader
+    - loads all thoregon system modules
+    - packaged to one single archive containing all modules for the target platform
+    - platforms are 
+  - repositoryloader
+
+### SSI
+- maintains a repository list
+  - maintain entries in puls (loaders)
+    - updates in repository entris
+    - when adding apps/components
+- can be adjusted on each device
+
+### Repositories
+- collection of components
+- description, metainfo and sources for component
+
+### App Store
+- manage one or more repositories
+- provides additional descriptions and documents
+- enables composition for components
+  - to higher level applications
+
+
 
 ## Formats
 
