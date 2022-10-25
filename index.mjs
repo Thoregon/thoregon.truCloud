@@ -25,3 +25,6 @@ export { default as ThoregonRepository } from './lib/repo/thoregonrepository.mjs
  * supporting the thoregon rules
  */
 export default new Dorifer();
+
+// publish annotations
+export { default as Service, Attach, Install, Activate, Deactivate, Uninstall }  from "./lib/service/annotations.mjs"
