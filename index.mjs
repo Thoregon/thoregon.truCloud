@@ -14,7 +14,7 @@ export { default as ThoregonApplication } from './lib/application/thoregonapplic
 export { default as AppSegment }          from './lib/application/appsegment.mjs';
 
 /*
- * repostory
+ * repository
  */
 
 export { default as ThoregonRepository } from './lib/repo/thoregonrepository.mjs';

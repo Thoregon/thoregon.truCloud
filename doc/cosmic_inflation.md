@@ -41,6 +41,7 @@ Cosmic Inflation
   - download 'thoregon.zip'
   - extract to cache
   - check digest & signature
+- restart app
 
 ## Install Universe
 - check if the thoregon system is already available
