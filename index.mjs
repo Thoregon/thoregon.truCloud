@@ -17,7 +17,14 @@ export { default as AppSegment }          from './lib/application/appsegment.mjs
  * repository
  */
 
-export { default as ThoregonRepository } from './lib/repo/thoregonrepository.mjs';
+export { default as ThoregonRepository }  from './lib/repo/thoregonrepository.mjs';
+
+
+//
+// Commons
+//
+
+export { isUFD }                          from './lib/commons.mjs';
 
 /*
  * Dorifer is the service supplying the

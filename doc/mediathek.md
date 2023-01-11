@@ -239,6 +239,10 @@ create of new storages and migrations are user/admin decisions
     - for all
     - for a root in the storage system, if multiple accounts
 
+#### HTTPS
+
+- fetch/POST option keepalive (do the request even when the tab is closed)
+
 #### IPFS & Pinning
 
 Garbage Collection
