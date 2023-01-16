@@ -4,7 +4,7 @@
  * @author: blukassen
  */
 
-import Dorifer from "./lib/dorifer.mjs";
+export { default as Dorifer } from "./lib/dorifer.mjs";
 
 /*
  * application classes
@@ -31,7 +31,7 @@ export { isUFD }                          from './lib/commons.mjs';
  * repository for the thoregon system and
  * supporting the thoregon rules
  */
-export default new Dorifer();
+// export default new Dorifer();
 
 // publish annotations
 export { default as Service, Attach, Install, Activate, Deactivate, Uninstall }  from "./lib/service/annotations.mjs"
