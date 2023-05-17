@@ -217,7 +217,8 @@ create of new storages and migrations are user/admin decisions
 - https://vimeo.com/de/
 - https://joinpeertube.org/
 - https://lbry.com/ 
-
+- https://nuoflix.de/
+- 
 --> https://www.google.com/search?sa=X&biw=1437&bih=1150&sxsrf=APwXEdcZOOtoTYSGPwKudby1rrvMbIddXA:1683103124497&si=AMnBZoEZ8aFftZu792frFYrnK9KQYGXRL3UTeDeHB9-uc0sfFfALEhaeQdyOhNi8YV6nCY5YhhDQTGHRAJcr91gwuLH__ob92guTliN0NKEpzPB5CDTS3xzY7h29ghrcy3LSUl2VHx1IJShIRyd3X_2KcAJVQOonJjdc_SHl8ha5OLdnQkAdCWK-YBTo4SkIi0Iq7GFKSQe6bW3OQnJ0EC_zONnTLFRXZaCgs1395uTHQsLjy73AypQsHGbcQ5w7LpoFvdLSMCH76a9tcuwWnYYmcN8GfdC0nztYV8I3uJ23iTkhHtJNrY-8WftTbSiYH8B10Ct0_laviJMku3xGaQEOG-lwmnoL8wsCMJJtC7Zj62jNjcJpY2Y%3D&q=BitChute&lei=cilSZK6NC5nY7_UPuOGT2AU
 
 ### Alt Youtube Client
