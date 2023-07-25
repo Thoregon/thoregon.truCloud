@@ -34,4 +34,4 @@ export { isUFD }                          from './lib/commons.mjs';
 // export default new Dorifer();
 
 // publish annotations
-export { default as Service, Attach, Install, Activate, Deactivate, Uninstall }  from "./lib/service/annotations.mjs"
+export { default as Service, AutomationService, Attach, Install, Activate, Deactivate, Uninstall, UseChannels, OnMessage }  from "./lib/service/annotations.mjs"
