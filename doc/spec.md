@@ -68,6 +68,7 @@ There are storage space providers doing this. they get incentives to backup your
 The truCloud enables a URL/URI mapping to publish multiple Webapps from one star (thoregon node)
 or a galaxy.
 Adding a URL to KARTE requires a singature matching the registered URL at the CA
+- https://www.heise.de/news/Safari-So-nutzt-man-kuenftig-Web-Apps-unter-macOS-14-9188466.html
 
 ## Components 
 
