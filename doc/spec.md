@@ -38,7 +38,8 @@ the can be published.
 A repository features a developer registry. Publishing components requires
 the component to have a valid signature. Updates can only be published 
 with a signature.
-
+- https://www.w3.org/TR/vc-di-bbs/
+- 
 ## Transactions
 
 sync Entities (snapshots) (ascending transaction number?).
