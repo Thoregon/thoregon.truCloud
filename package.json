@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Thoregon/thoregon.truCloud/issues"
   },
-  "homepage": "https://github.com/Thoregon/thoregon.truCloud#readme"
+  "homepage": "https://github.com/Thoregon/thoregon.truCloud#readme",
+  "dependencies": {
+    "cron-parser": "^5.3.0",
+    "temporal-polyfill": "^0.3.0"
+  }
 }
