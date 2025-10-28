@@ -2,7 +2,7 @@
   "name": "thoregon.truCloud",
   "version": "1.0.0",
   "description": "Thoregon True Cloud",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,16 @@
   "homepage": "https://github.com/Thoregon/thoregon.truCloud#readme",
   "dependencies": {
     "cron-parser": "^5.3.0",
-    "temporal-polyfill": "^0.3.0"
+    "evolux.everblack": "file:../../evolux.modules/evolux.everblack",
+    "evolux.supervise": "file:../../evolux.modules/evolux.supervise",
+    "evolux.universe": "file:../../evolux.modules/evolux.universe",
+    "evolux.util": "file:../../evolux.modules/evolux.util",
+    "evolux.web": "file:../../evolux.modules/evolux.web",
+    "temporal-polyfill": "^0.3.0",
+    "thoregon.archetim": "file:../thoregon.archetim",
+    "thoregon.aurora": "file:../thoregon.aurora",
+    "thoregon.crystalline": "file:../thoregon.crystalline",
+    "thoregon.identity": "file:../thoregon.identity",
+    "thoregon.telom": "file:../thoregon.telom"
   }
 }
